@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/city"
+    tools:context=".WeatherActivity">
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btnback"
+                android:layout_width="5dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/back" />
+            <EditText
+                android:id="@+id/etCity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="15dp"
+                android:layout_weight="1"
+                android:background="@android:drawable/edit_text"
+                android:drawableLeft="@drawable/ic"
+                android:drawablePadding="5dp"
+                android:ems="10"
+                android:hint="请输入城市名">
+                <requestFocus />
+            </EditText>
+            <ImageButton
+                android:id="@+id/btnQuery"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="25dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:src="@drawable/icon_search" />
+
+        </LinearLayout>
+
+    <ListView
+        android:id="@+id/FutureWeather"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="-6dp"
+        android:layout_marginRight="10dp"
+        android:dividerHeight="10dp"
+        android:layoutAnimation="@anim/weather_list_layout_animation"
+       ></ListView>
+
+</RelativeLayout>
